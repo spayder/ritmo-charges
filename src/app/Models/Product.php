@@ -13,7 +13,7 @@ class Product extends Model
      */
     private $products;
 
-    protected $perPage = 2;
+    protected $perPage = 5;
 
     private function getAll(): Product
     {

@@ -12,6 +12,5 @@ class ProductService
         return Discount::applyFor(
             Product::getProducts()
         );
-
     }
 }

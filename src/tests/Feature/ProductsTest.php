@@ -14,7 +14,7 @@ class ProductsTest extends TestCase
         $response = $this->get('/products');
 
         $response->assertStatus(200);
-        $response->assertJsonCount(2);
+        $response->assertJsonCount(5);
 
         $response->assertJsonStructure([
             '*' => [

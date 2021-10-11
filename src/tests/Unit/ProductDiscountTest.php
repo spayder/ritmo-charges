@@ -23,9 +23,10 @@ class ProductDiscountTest extends TestCase
             "price" => 59000,
         ]]);
 
-        $productsWithDiscount = Discount::applyFor($products);
-        dd($productsWithDiscount);
+        $discountModel = app(\App\Models\Discount::class);
+        $productsWithDiscount = $discountModel->applyFor($products);
 
-        $this->assertTrue(true);
+        $this->assertEquals($productsWithDiscount[0]['price']['discount_percentage'], 30);
+        $this->assertNull($productsWithDiscount[1]['price']['discount_percentage']);
     }
 }
