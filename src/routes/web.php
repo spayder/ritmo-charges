@@ -1,6 +1,5 @@
 <?php
 
-use App\Services\ProductService;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,10 +16,3 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('test', function () {
-    $data = (new ProductService)->getProducts();
-    dd($data);
-});
-
-Route::get('products', [\App\Http\Controllers\ProductController::class, 'index']);

@@ -12,8 +12,5 @@
 
 The application is listening on port ``8085`` so the app full url is: ``localhost:8085``
 
-The only endpoint is ``/products`` url, and we can paginate and apply some filters like:
-``/products?category=boots&priceLessThan=100&page=2`` although by default there is 5 items per page 
-
 To run the tests, just execute:
 ``docker-compose run --rm php ./vendor/bin/phpunit``
