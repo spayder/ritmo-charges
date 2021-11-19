@@ -8,6 +8,9 @@
 3. Generate secret key 
 ``docker-compose run --rm php php artisan key:generate``
 4. copy .env.example .env in ``src`` directory
+5. change .env params:
+   1. ``REDIS_HOST=redis``
+   2.  ``QUEUE_CONNECTION=redis``
 
 
 The application is listening on port ``8085`` so the app full url is: ``localhost:8085``
